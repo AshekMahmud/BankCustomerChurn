@@ -1,8 +1,5 @@
 # BankCustomerChurn
-Visit the live app here: [Bank Customer Churn Streamlit App](https://bankcustomerchurn-hgvmdjfmqywmitqpz7iywy.streamlit.app/)
-
 [![Streamlit App](https://img.shields.io/badge/Streamlit-App-blue)](https://bankcustomerchurn-hgvmdjfmqywmitqpz7iywy.streamlit.app/)
-
 Visit the live app here: [Bank Customer Churn Streamlit App](https://bankcustomerchurn-hgvmdjfmqywmitqpz7iywy.streamlit.app/)
 
 ---
