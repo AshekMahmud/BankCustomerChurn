@@ -94,6 +94,7 @@ def categorize_Credit(risk):
 
 # Apply the function to the risk column to create new column CreditScore:
 filtered_df['CreaditScore'] = filtered_df['risk'].apply(categorize_Credit)
+df['CreditScore_group'] = df['risk'].apply(categorize_Credit)
 
 # calculations
 total_member = filtered_df.shape[0]
@@ -702,18 +703,20 @@ with col17:
 st.subheader('Customer churn and retention analysis based on risk and age groups.')
 
 # calculation for raw value:
-grouped_df4 = filtered_df.groupby(['risk', 'CreaditScore','age_group','Exited']).size().reset_index(name='count')
+
+grouped_df4 = df.groupby(['risk', 'CreditScore_group','age_group','Exited']).size().reset_index(name='count')
 # Pivot the table
-pivot_df4 = grouped_df4.pivot_table(index=['risk','CreaditScore','Exited'],columns='age_group',values='count',fill_value=0).reset_index()
+pivot_df4 = grouped_df4.pivot_table(index=['risk','CreditScore_group','Exited'],columns='age_group',values='count',fill_value=0).reset_index()
 # Rename columns for clarity
 pivot_df4.columns.name = None
 pivot_df4['Exited']=pivot_df4['Exited'].map({0:'Retained', 1:'Churned'})
 
 
 # calculation for percentage value:
-total = pivot_df4.groupby(['risk', 'CreaditScore'])[
+total = pivot_df4.groupby(['risk', 'CreditScore_group'])[
     ['18-24', '25-34', '35-44', '45-54', '55-64', '65+']].sum().reset_index()
-merge = pd.merge(pivot_df4, total, on=['risk', 'CreaditScore'])
+    
+merge = pd.merge(pivot_df4, total, on=['risk', 'CreditScore_group'])
 merge['18-24'] = (merge['18-24_x'] / merge['18-24_y']) * 100
 merge['25-34'] = (merge['25-34_x'] / merge['25-34_y']) * 100
 merge['35-44'] = (merge['35-44_x'] / merge['35-44_y']) * 100
@@ -749,7 +752,7 @@ with col21:
             merge,
             column_config={
                 "risk": "risk",
-                "CreaditScore": "CreaditScore",
+                "CreditScore_group": "CreaditScore",
                 "Exited": "Exited",
                 "18-24": st.column_config.ProgressColumn(
                     "18-24 (%)",
@@ -802,7 +805,7 @@ with col21:
             pivot_df4,
             column_config={
                 "risk": "risk",
-                "CreaditScore": "CreaditScore",
+                "CreditScore_group": "CreaditScore",
                 "Exited": "Exited",
                 "18-24": st.column_config.ProgressColumn(
                     "18-24",
