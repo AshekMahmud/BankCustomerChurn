@@ -1,8 +1,5 @@
 # BankCustomerChurn
 ---
-
-### Bank Customer Churn Dataset
-
 This dataset contains account information for 10,000 customers from a European bank. It includes key details such as customers' credit scores, account balances, the number of products they use, and whether they have churned (left the bank). This dataset is an ideal resource for conducting churn analysis and building predictive models for customer retention.
 
 #### Key Analysis Opportunities:
