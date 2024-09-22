@@ -1,6 +1,10 @@
 # BankCustomerChurn
 Visit the live app here: [Bank Customer Churn Streamlit App](https://bankcustomerchurn-hgvmdjfmqywmitqpz7iywy.streamlit.app/)
 
+[![Streamlit App](https://img.shields.io/badge/Streamlit-App-blue)](https://bankcustomerchurn-hgvmdjfmqywmitqpz7iywy.streamlit.app/)
+
+Visit the live app here: [Bank Customer Churn Streamlit App](https://bankcustomerchurn-hgvmdjfmqywmitqpz7iywy.streamlit.app/)
+
 ---
 This dataset contains account information for 10,000 customers from a European bank. It includes key details such as customers' credit scores, account balances, the number of products they use, and whether they have churned (left the bank). This dataset is an ideal resource for conducting churn analysis and building predictive models for customer retention.
 
