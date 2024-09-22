@@ -4,7 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 
-df = pd.read_csv(r'E:\streamlit\practice 3 maven\Bank Customer Churn\bank churn cleaned.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/AshekMahmud/BankCustomerChurn/refs/heads/main/bank%20churn%20cleaned.csv')
 
 df.columns = df.columns.str.strip()
 
