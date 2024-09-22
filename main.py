@@ -642,7 +642,7 @@ with col16:
         pivot_df3,
         column_config={
             "Exited": "Exited",
-            "CreaditScore": "CreaditScore",
+            "CreaditScore": "CreditScore",
             "risk": "risk",
             "HaveCrCard": st.column_config.ProgressColumn(
                 "Cardholder",
@@ -679,7 +679,7 @@ with col17:
         pivot_df2,
         column_config={
             "Exited": "Exited",
-            "CreaditScore": "CreaditScore",
+            "CreaditScore": "CreditScore",
             "risk": "risk",
             "Active": st.column_config.ProgressColumn(
                 "Active",
